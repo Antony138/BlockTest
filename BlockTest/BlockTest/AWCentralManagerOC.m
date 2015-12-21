@@ -75,4 +75,65 @@
 - (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error {
     NSLog(@"");
 }
+
+#pragma mark - CBPeripheralDelegate (9个方法,都是可选的方法)
+#pragma mark 方法1:蓝牙设备名称更新会调用这个方法?(IUL11改名会调用这个方法，拿到新的名称吗?确认。)
+- (void)peripheralDidUpdateName:(CBPeripheral *)peripheral {
+    
+}
+
+#pragma mark 方法2:修改“服务”后会调用的方法(谁修改“服务”?)
+- (void)peripheral:(CBPeripheral *)peripheral didModifyServices:(NSArray<CBService *> *)invalidatedServices {
+
+}
+
+#pragma mark 方法3:读取到RSSI后会调用的方法
+- (void)peripheral:(CBPeripheral *)peripheral didReadRSSI:(NSNumber *)RSSI error:(NSError *)error {
+
+}
+
+#pragma mark 方法4:发现“服务”后会调用的方法
+- (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error {
+
+}
+
+#pragma mark 方法5:发现“服务”里面的“服务”后会调用的方法
+- (void)peripheral:(CBPeripheral *)peripheral didDiscoverIncludedServicesForService:(CBService *)service error:(NSError *)error {
+
+}
+
+#pragma mark 方法6:发现“服务”里面的“特征”后会调用的方法
+- (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error {
+
+}
+
+#pragma mark 方法7:读取到“特征”里面的值后会调用的方法
+- (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
+
+}
+
+#pragma mark 方法8:写入数据到“特征”后会调用的方法
+- (void)peripheral:(CBPeripheral *)peripheral didWriteValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
+
+}
+
+#pragma mark 方法9:读取到“特征“通知的值(硬件返回的数据)时会调用的方法
+- (void)peripheral:(CBPeripheral *)peripheral didUpdateNotificationStateForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
+
+}
+
+#pragma mark 方法10:发现“特征“里面的“描述”时会调用的方法
+- (void)peripheral:(CBPeripheral *)peripheral didDiscoverDescriptorsForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
+
+}
+
+#pragma mark 方法11:读取到“描述”的值时会调用的方法
+- (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForDescriptor:(CBDescriptor *)descriptor error:(NSError *)error {
+
+}
+
+#pragma mark 方法12:写入数据到“描述”时会调用的方法
+- (void)peripheral:(CBPeripheral *)peripheral didWriteValueForDescriptor:(CBDescriptor *)descriptor error:(NSError *)error {
+
+}
 @end
