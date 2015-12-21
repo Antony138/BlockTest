@@ -15,6 +15,8 @@
 		0AD7605A1C26D0D60096DBD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AD760581C26D0D60096DBD9 /* LaunchScreen.storyboard */; };
 		0AD760651C26D0D60096DBD9 /* BlockTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD760641C26D0D60096DBD9 /* BlockTestTests.m */; };
 		0AD760701C26D0D60096DBD9 /* BlockTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7606F1C26D0D60096DBD9 /* BlockTestUITests.m */; };
+		0AE92C0E1C279E640025691E /* AWCentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE92C0D1C279E640025691E /* AWCentralManager.swift */; };
+		0AE92C111C279EE20025691E /* AWCentralManagerOC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE92C101C279EE20025691E /* AWCentralManagerOC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		0AD7606B1C26D0D60096DBD9 /* BlockTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AD7606F1C26D0D60096DBD9 /* BlockTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockTestUITests.m; sourceTree = "<group>"; };
 		0AD760711C26D0D60096DBD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AE92C0C1C279E640025691E /* BlockTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BlockTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		0AE92C0D1C279E640025691E /* AWCentralManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWCentralManager.swift; sourceTree = "<group>"; };
+		0AE92C0F1C279EE20025691E /* AWCentralManagerOC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWCentralManagerOC.h; sourceTree = "<group>"; };
+		0AE92C101C279EE20025691E /* AWCentralManagerOC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWCentralManagerOC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +107,9 @@
 		0AD760491C26D0D60096DBD9 /* BlockTest */ = {
 			isa = PBXGroup;
 			children = (
-				0AD7604D1C26D0D60096DBD9 /* AppDelegate.h */,
-				0AD7604E1C26D0D60096DBD9 /* AppDelegate.m */,
+				0AE92C081C279DD10025691E /* Bluetooth */,
 				0AD760501C26D0D60096DBD9 /* ViewController.h */,
 				0AD760511C26D0D60096DBD9 /* ViewController.m */,
-				0AD760531C26D0D60096DBD9 /* Main.storyboard */,
-				0AD760561C26D0D60096DBD9 /* Assets.xcassets */,
-				0AD760581C26D0D60096DBD9 /* LaunchScreen.storyboard */,
-				0AD7605B1C26D0D60096DBD9 /* Info.plist */,
 				0AD7604A1C26D0D60096DBD9 /* Supporting Files */,
 			);
 			path = BlockTest;
@@ -117,6 +118,13 @@
 		0AD7604A1C26D0D60096DBD9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0AE92C0C1C279E640025691E /* BlockTest-Bridging-Header.h */,
+				0AD7604D1C26D0D60096DBD9 /* AppDelegate.h */,
+				0AD7604E1C26D0D60096DBD9 /* AppDelegate.m */,
+				0AD760531C26D0D60096DBD9 /* Main.storyboard */,
+				0AD760561C26D0D60096DBD9 /* Assets.xcassets */,
+				0AD760581C26D0D60096DBD9 /* LaunchScreen.storyboard */,
+				0AD7605B1C26D0D60096DBD9 /* Info.plist */,
 				0AD7604B1C26D0D60096DBD9 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -138,6 +146,16 @@
 				0AD760711C26D0D60096DBD9 /* Info.plist */,
 			);
 			path = BlockTestUITests;
+			sourceTree = "<group>";
+		};
+		0AE92C081C279DD10025691E /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				0AE92C0D1C279E640025691E /* AWCentralManager.swift */,
+				0AE92C0F1C279EE20025691E /* AWCentralManagerOC.h */,
+				0AE92C101C279EE20025691E /* AWCentralManagerOC.m */,
+			);
+			name = Bluetooth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +291,8 @@
 				0AD760521C26D0D60096DBD9 /* ViewController.m in Sources */,
 				0AD7604F1C26D0D60096DBD9 /* AppDelegate.m in Sources */,
 				0AD7604C1C26D0D60096DBD9 /* main.m in Sources */,
+				0AE92C111C279EE20025691E /* AWCentralManagerOC.m in Sources */,
+				0AE92C0E1C279E640025691E /* AWCentralManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,10 +433,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BlockTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.homni.BlockTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BlockTest/BlockTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -424,10 +447,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BlockTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.homni.BlockTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BlockTest/BlockTest-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -498,6 +523,7 @@
 				0AD760761C26D0D60096DBD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AD760771C26D0D60096DBD9 /* Build configuration list for PBXNativeTarget "BlockTestTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +532,7 @@
 				0AD760791C26D0D60096DBD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AD7607A1C26D0D60096DBD9 /* Build configuration list for PBXNativeTarget "BlockTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +541,7 @@
 				0AD7607C1C26D0D60096DBD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
