@@ -11,10 +11,22 @@
 
 @interface AWCentralManagerOC ()<CBCentralManagerDelegate, CBPeripheralDelegate>
 
+@property (strong, nonatomic) CBCentralManager *bleManager;
+
 @end
 
 @implementation AWCentralManagerOC
 // 如何开始扫描？
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _bleManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
+    }
+    return self;
+}
+
 
 #pragma mark - CBCentralManagerDelegate (6个方法,1个必须实现)
 #pragma mark 方法1:手机蓝牙状态的更新时调用的方法(6种状态)
